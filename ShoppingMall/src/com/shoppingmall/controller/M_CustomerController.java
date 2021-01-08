@@ -49,6 +49,11 @@ public class M_CustomerController extends HttpServlet {
 				break;
 			case "/m_customerSignUpPage.customer" :
 				pathNRedirect = new PathNRedirect();
+				pathNRedirect.setPath("m_customer/emailAuthentication.jsp");
+				pathNRedirect.setRedirect(false);
+				break;
+			case "/emailAuthentication.customer" :
+				pathNRedirect = new PathNRedirect();
 				pathNRedirect.setPath("m_customer/signUpPage.jsp");
 				pathNRedirect.setRedirect(false);
 				break;
