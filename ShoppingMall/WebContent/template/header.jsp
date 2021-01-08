@@ -4,8 +4,8 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String title = request.getParameter("title");
-	if(title == null || title.isEmpty()){
-		title="환영합니다.";
+	if (title == null || title.isEmpty()) {
+		title = "환영합니다";
 	}
 	pageContext.setAttribute("title", title);
 %>
@@ -14,7 +14,7 @@
 <head>
 <meta charset="UTF-8">
 <%-- CSS --%>
-<link type="text/css" rel="stylesheet" href="assets/style/style.css" >
+<link type="text/css" rel="stylesheet" href="/ShoppingMall/assets/style/style.css" >
 <%-- CDN --%>
 <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
 <%-- jQuery --%>
@@ -37,7 +37,7 @@
 			<ul class="menu-bar">
 				<li><a href="javascript:void(0)" >ABOUT US</a></li>
 				<li>
-					<a href="javascript:void(0)" >NEW/BEST</a>
+					<a href="/ShoppingMall/items/itemDetail.jsp" >NEW/BEST</a>
 					<ul class="depth1">
 						<li><a href="javascript:void(0)" >패키지</a></li>
 						<li><a href="javascript:void(0)" >NEW</a></li>
