@@ -8,7 +8,11 @@
 <div class="signup-wrap">
 	<form method="post">
 		<table border="1">
-			<caption>회원가입</caption>
+			<thead>
+				<tr>
+					<th colspan="2">회원가입</th>
+				</tr>
+			</thead>
 			<tbody>
 				<tr>
 					<td>아이디</td>
@@ -64,11 +68,11 @@
 				<tr>
 					<td>이메일</td>
 					<td>
-						<c:if test="${m_customer_email eq null}">
+						<c:if test="${param.m_customer_email eq null}">
 							<input type="text" name="m_customer_email" />
 						</c:if>
-						<c:if test="${m_customer_email ne null}">
-							<input type="text" name="m_customer_email" value="${m_customer_email}" readonly />
+						<c:if test="${param.m_customer_email ne null}">
+							<input type="text" name="m_customer_email" value="${param.m_customer_email}" readonly />
 						</c:if>
 					</td>
 				</tr>
@@ -89,8 +93,8 @@
 				약관을 읽었으며 해당 사항에 동의합니다.
 			</div>
 		</div>
-		<input type="button" value="다음에 가입" />
-		<input type="button" value="가입하기" id="signup-btn" />
+		<button type="button" class="btn btn-secondary">다음에 가입</button>
+		<button type="button" class="btn btn-primary" id="signup-btn" >가입하기</button>
 	</form>
 </div>
 
