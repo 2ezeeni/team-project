@@ -63,7 +63,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="javascript:void(0)" >BOARD</a>123
+					<a href="javascript:void(0)" >BOARD</a>
 					<ul class="depth1">
 						<li><a href="javascript:void(0)" >REVIEW</a></li>
 						<li><a href="javascript:void(0)" >QNA</a></li>
