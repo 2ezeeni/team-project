@@ -30,10 +30,16 @@ a {
 	display: flex;
 	float: right;
 }
+<<<<<<< HEAD
 
 .top>li>a {
 	display: inline-block;
 	width: 100px;
+=======
+.top>li>a {
+	display: inline-block;
+	width: 150px;
+>>>>>>> branch 'email-authen' of https://github.com/2ezeeni/team-project.git
 	color: black;
 	text-align: center;
 	height: 60px;
