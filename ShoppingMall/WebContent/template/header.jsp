@@ -4,8 +4,8 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String title = request.getParameter("title");
-	if(title == null || title.isEmpty()){
-		title="환영합니다.";
+	if (title == null || title.isEmpty()) {
+		title = "환영합니다";
 	}
 	pageContext.setAttribute("title", title);
 %>
@@ -28,26 +28,16 @@
 		<div class="top-wrap" >
 			<img id="logo" alt="로고" src="">
 			<ul class="top">
-				<%-- 로그인 하지 않은 상태 --%>
-				<c:if test="${loginDto eq null}">
-					<li><a href="/ShoppingMall/m_customerLoginPage.customer" >LOGIN</a></li>
-					<li><a href="javascript:void(0)" >장바구니</a></li>
-					<li><a href="javascript:void(0)" >마이페이지</a></li>
-				</c:if>
-				<%-- 로그인 상태 --%>
-				<c:if test="${loginDto ne null }">
-					<li style="font-size:12px; font-weight:900;" ><a href="javascript:void(0)">${loginDto.m_customer_id}(${loginDto.m_customer_name})</a>님 반갑습니다!</li>
-					<li><a href="/ShoppingMall/m_customerLogoutPage.customer" >LOGOUT</a></li>
-					<li><a href="javascript:void(0)" >장바구니</a></li>
-					<li><a href="javascript:void(0)" >마이페이지</a></li>
-				</c:if>
+				<li><a href="/PersonalMall/m_customerLoginPage.customer" >LOGIN</a></li>
+				<li><a href="javascript:void(0)" >장바구니</a></li>
+				<li><a href="javascript:void(0)" >마이페이지</a></li>
 			</ul>
 		</div>
 		<nav>
 			<ul class="menu-bar">
 				<li><a href="javascript:void(0)" >ABOUT US</a></li>
 				<li>
-					<a href="javascript:void(0)" >NEW/BEST</a>
+					<a href="/ShoppingMall/items/itemDetail.jsp" >NEW/BEST</a>
 					<ul class="depth1">
 						<li><a href="javascript:void(0)" >패키지</a></li>
 						<li><a href="javascript:void(0)" >NEW</a></li>

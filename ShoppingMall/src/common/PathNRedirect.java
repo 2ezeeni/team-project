@@ -1,4 +1,4 @@
-package com.shoppingmall.common;
+package common;
 
 public class PathNRedirect {
 

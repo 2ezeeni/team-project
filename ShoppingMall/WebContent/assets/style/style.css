@@ -30,9 +30,10 @@ a {
 	display: flex;
 	float: right;
 }
+
 .top>li>a {
 	display: inline-block;
-	width: 150px;
+	width: 100px;
 	color: black;
 	text-align: center;
 	height: 60px;
