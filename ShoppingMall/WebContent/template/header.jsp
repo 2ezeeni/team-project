@@ -15,6 +15,7 @@
 <meta charset="UTF-8">
 <%-- CSS --%>
 <link type="text/css" rel="stylesheet" href="/ShoppingMall/assets/style/style.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <%-- CDN --%>
 <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
 <%-- jQuery --%>
