@@ -81,16 +81,16 @@
 					<td>주소</td>
 					<td>
 						<!-- 주소찾기 API 추가 -->
-						<input type="text" id="sample4_postcode" placeholder="우편번호">
-						<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
-						<input type="text" id="sample4_roadAddress" placeholder="도로명주소">
-						<input type="text" id="sample4_jibunAddress" placeholder="지번주소">
+						<input type="text" id="postcode" placeholder="우편번호">
+						<input type="button" onclick="execDaumPostcode()" value="우편번호 찾기"><br>
+						<input type="text" id="roadAddress" placeholder="도로명주소">
+						<input type="text" id="jibunAddress" placeholder="지번주소">
 						<span id="guide" style="color:#999;display:none"></span>
-						<input type="text" id="sample4_detailAddress" placeholder="상세주소">
-						<input type="text" id="sample4_extraAddress" placeholder="참고항목">
+						<input type="text" id="detailAddress" placeholder="상세주소">
+						<input type="text" id="extraAddress" placeholder="참고항목">
 						<script>
 						    //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
-						    function sample4_execDaumPostcode() {
+						    function execDaumPostcode() {
 						        new daum.Postcode({
 						            oncomplete: function(data) {
 						                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
@@ -115,15 +115,15 @@
 						                }
 						
 						                // 우편번호와 주소 정보를 해당 필드에 넣는다.
-						                document.getElementById('sample4_postcode').value = data.zonecode;
-						                document.getElementById("sample4_roadAddress").value = roadAddr;
-						                document.getElementById("sample4_jibunAddress").value = data.jibunAddress;
+						                document.getElementById('postcode').value = data.zonecode;
+						                document.getElementById("roadAddress").value = roadAddr;
+						                document.getElementById("jibunAddress").value = data.jibunAddress;
 						                
 						                // 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
 						                if(roadAddr !== ''){
-						                    document.getElementById("sample4_extraAddress").value = extraRoadAddr;
+						                    document.getElementById("extraAddress").value = extraRoadAddr;
 						                } else {
-						                    document.getElementById("sample4_extraAddress").value = '';
+						                    document.getElementById("extraAddress").value = '';
 						                }
 						
 						                var guideTextBox = document.getElementById("guide");
