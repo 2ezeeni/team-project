@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.shoppingmall.command.customer.M_CustomerCommand;
+import com.shoppingmall.command.customer.M_CustomerEmailAuthenticationCommand;
 import com.shoppingmall.command.customer.M_CustomerLogoutCommand;
 import com.shoppingmall.common.PathNRedirect;
 
@@ -41,6 +42,10 @@ public class M_CustomerController extends HttpServlet {
 				command = new M_CustomerLogoutCommand();
 				pathNRedirect = command.execute(request, response);
 				break;
+			case "/emailAuthentication.customer" :
+				command = new M_CustomerEmailAuthenticationCommand();
+				pathNRedirect = command.execute(request, response);
+				break;
 			// 단순이동
 			case "/m_customerLoginPage.customer" :
 				pathNRedirect = new PathNRedirect();
@@ -49,9 +54,10 @@ public class M_CustomerController extends HttpServlet {
 				break;
 			case "/m_customerSignUpPage.customer" :
 				pathNRedirect = new PathNRedirect();
-				pathNRedirect.setPath("m_customer/signUpPage.jsp");
+				pathNRedirect.setPath("m_customer/emailAuthentication.jsp");
 				pathNRedirect.setRedirect(false);
 				break;
+			
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -1,9 +1,8 @@
 package com.shoppingmall.command.customer;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
+import javax.servlet.http.HttpServletResponse;
 import com.shoppingmall.common.PathNRedirect;
 
 public class M_CustomerLogoutCommand implements M_CustomerCommand {
@@ -12,6 +11,7 @@ public class M_CustomerLogoutCommand implements M_CustomerCommand {
 	public PathNRedirect execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		request.getSession().removeAttribute("loginDto");
+		
 		
 		PathNRedirect pathNRedirect = new PathNRedirect();
 		pathNRedirect.setPath("/ShoppingMall/index.jsp");
