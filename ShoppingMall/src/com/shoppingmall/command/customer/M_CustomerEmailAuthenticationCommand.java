@@ -24,7 +24,7 @@ public class M_CustomerEmailAuthenticationCommand implements M_CustomerCommand {
 	public PathNRedirect execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		String host = "http://localhost:9090/ShoppingMall/";
-		String from = "a86007681@gmail.com"; // 관리자 gmail입력
+		String from = "관리자 gmail입력"; // 관리자 gmail입력
 		String to = request.getParameter("m_customer_email");;
 		String subject = "시험용 인증메일";
 		String key = new SHA256().getSHA256(to);
@@ -37,7 +37,7 @@ public class M_CustomerEmailAuthenticationCommand implements M_CustomerCommand {
 		// 관리자의 메일주소가 naver일 경우
 		// p.put("mail.smtp.host", "smtp.naver.com");
 		// p.put("mail.smtp.port", "587");
-		// p.put("mail.smtp.socketFactory.port", "465");
+		// p.put("mail.smtp.socketFactory.port", "587");
 		p.put("mail.smtp.host", "smtp.googlemail.com");
 		p.put("mail.smtp.port", "465");
 		p.put("mail.smtp.starttls.enable", "true");
