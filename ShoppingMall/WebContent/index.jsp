@@ -4,3 +4,5 @@
 
 <h1>Hello Personal Color Shopping mall</h1>
 <%@ include file="template/footer.jsp" %>
+
+

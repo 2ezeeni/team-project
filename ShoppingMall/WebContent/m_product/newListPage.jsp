@@ -2,6 +2,23 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %> 
 
+<jsp:include page = "../template/header.jsp" >
+	<jsp:param value = "" name = "title" />
+</jsp:include>
+
+<script>
+	
+	function fn_newListPage(f) {
+		if (fn_listpage.click = '') {
+			alert('ResultPage');
+			return;
+		}
+		f.action = '/newResultPage';
+		f.submit();
+	}
+	
+</script>
+
   
 <!DOCTYPE html>
 <html>
@@ -16,7 +33,13 @@
 	
 	총 00 개의 상품이 있습니다. <br/><br/><br/>
 	
-	<input type = "image" a href = "" /><br/>
+	<div class = "text-right" >
+		<span>정렬| 낮은 가격순 | 높은 가격순 | 판매순 등</span>
+	</div>
+	
+	
+	<input type = "image" value = "상품명">
+	<a href= "" ></a><br/>
 	
 	상품이름 <br/>
 	가격 <br/>
@@ -34,6 +57,8 @@
 	가격 <br/>
 	주목 폭주 <br/><br/>
 	<br/><br/>
+	
+	
 	
 	
 	<tbody>
