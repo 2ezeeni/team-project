@@ -36,14 +36,14 @@ public class M_CustomerEmailAuthenticationCommand implements M_CustomerCommand {
 		p.put("mail.smtp.user", from);
 		// 관리자의 메일주소가 naver일 경우
 		// p.put("mail.smtp.host", "smtp.naver.com");
-		// p.put("mail.smtp.port", "587");
-		// p.put("mail.smtp.socketFactory.port", "587");
+		// p.put("mail.smtp.port", "465");
+		// p.put("mail.smtp.socketFactory.port", "465");
 		p.put("mail.smtp.host", "smtp.googlemail.com");
-		p.put("mail.smtp.port", "465");
+		p.put("mail.smtp.port", "587");
 		p.put("mail.smtp.starttls.enable", "true");
 		p.put("mail.smtp.auth", "true");
 		p.put("mail.smtp.debug", "true");
-		p.put("mail.smtp.socketFactory.port", "465");
+		p.put("mail.smtp.socketFactory.port", "587");
 		p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 		p.put("mail.smtp.socketFactory.fallback", "false");
 		
